@@ -162,13 +162,13 @@ export default function HeroSection() {
               >
                 {HERO.cta1.label}
               </button>
-              <button
-                onClick={() => handleClick(HERO.cta2.href)}
+              <a
+                href={HERO.cta2.href}
                 className="flex items-center gap-2 text-slate-700 font-semibold text-sm hover:text-blue-600 transition-colors cursor-pointer"
               >
                 {HERO.cta2.label}
                 <ArrowRight size={16} />
-              </button>
+              </a>
             </motion.div>
 
             {/* Tech-stack strip */}

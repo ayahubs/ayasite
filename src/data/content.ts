@@ -14,7 +14,7 @@ export const HERO = {
   description:
     "Somos uma empresa de programação apaixonada por resolver problemas reais com tecnologia. Do primeiro commit à entrega final, cada linha de código tem propósito.",
   cta1: { label: "Iniciar Projeto", href: "#contact"   },
-  cta2: { label: "Ver Portfólio",   href: "#portfolio" },
+  cta2: { label: "Ver Portfólio",   href: "/portfolio" },
   trust: {
     label: "Confiado por +50 empresas",
     stars: 5,

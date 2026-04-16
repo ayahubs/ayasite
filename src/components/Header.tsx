@@ -100,12 +100,12 @@ export default function Header() {
           className="hidden md:flex items-center gap-8"
         >
           {/* Home */}
-          <button
-            onClick={() => handleNavClick("#hero")}
+          <a
+            href={"/"}
             className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors cursor-pointer"
           >
             Home
-          </button>
+          </a>
 
           {/* Mega menu Serviços */}
           <div
@@ -115,7 +115,6 @@ export default function Header() {
             className="relative"
           >
             <button
-              onClick={() => handleNavClick("#services")}
               className="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors cursor-pointer"
             >
               Serviços
