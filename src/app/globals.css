@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* ─── Brand tokens ─────────────────────────────────────────── */
+@theme inline {
+  --color-brand-50:  #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-900: #0f172a;
+
+  --color-accent-400: #34d399;
+  --color-accent-500: #10b981;
+
+  --color-surface:   #f8fafc;
+  --color-dark:      #0f1629;
+  --color-muted:     #64748b;
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+}
+
+/* ─── Scroll-snap container ─────────────────────────── */
+html { scroll-padding-top: 72px; }
+
+.snap-main {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Snap only on md+ (768px) */
+@media (min-width: 768px) {
+  .snap-main {
+    scroll-snap-type: y mandatory;
+  }
+
+  .snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+.snap-section {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* On mobile, sections scroll freely */
+@media (max-width: 767px) {
+  .snap-main {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .snap-section {
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+  }
+}
+
+/* ─── Reduced-motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+.snap-main::-webkit-scrollbar { width: 4px; }
+.snap-main::-webkit-scrollbar-track { background: transparent; }
+.snap-main::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+
+/* ─── Global ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+body { background: #ffffff; color: #0f172a; }
