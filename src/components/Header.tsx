@@ -16,6 +16,11 @@ const PRODUCTS = [
     href: "https://leadspj.com",
     description: "CRM para WhatsApp com lista de empresas",
   },
+  {
+    label: "Clynir",
+    href: "https://clynir.com",
+    description: "Software de gestão para clínicas e consultórios",
+  },
 ];
 
 export default function Header() {
